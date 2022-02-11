@@ -4,6 +4,7 @@ const { engine } = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
+const path = require('path');
 
 require('dotenv').config();
 
@@ -18,7 +19,8 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-app.use(express.static('public'));
+//static files
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cookieParser());
 app.use(session({
@@ -29,7 +31,8 @@ app.use(session({
     store: new mongoStore({ mongooseConnection: mongoose.connection })
 }));
 
-app.get('/', router());
+app.use('/', router());
+
 app.listen(port, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
+    console.log(`Server running at http://${hostname}:${port}`);
 })

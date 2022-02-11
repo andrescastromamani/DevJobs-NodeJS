@@ -6,3 +6,6 @@ mongoose.connection.on('error', (err) => {
     console.log(err);
     process.exit();
 })
+
+//models
+require('../models/Vacancy');
