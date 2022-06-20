@@ -1,13 +1,33 @@
 <div class="row shadow p-3 mb-5 bg-body rounded">
     <h2 class="text-center">Create Vacancy</h2>
-    <form action="">
+    <form action="/vacancy/create" method="post">
+        <h3>Information</h3>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="title" class="form-label">Title Vacancy</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Insert vacancy name">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="company" class="form-label">Company Name</label>
+            <input class="form-control" id="company" name="company">
+        </div>
+        <div class="mb-3">
+            <label for="salary" class="form-label">Salary (USD)</label>
+            <input class="form-control" id="salary" name="salary">
+        </div>
+        <div class="mb-3">
+            <label for="contract" class="form-label">Company Name</label>
+            <select name="contract" id="contract" class="form-select">
+                <option value="" disabled selected>--Select a Option--</option>
+                <option value="fulltime">Full Time</option>
+                <option value="parttime">Part Time</option>
+                <option value="freelance">Freelance</option>
+            </select>
+        </div>
+        <h3>Description</h3>
+        <div class="mb-3">
+            <label for="decription" class="form-label">Description</label>
+            <input type="hidden" name="description" id="x" class="form-control">
+            <trix-editor input="x"></trix-editor>
         </div>
     </form>
 </div>

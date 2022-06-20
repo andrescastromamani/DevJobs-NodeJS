@@ -6,23 +6,23 @@ const shortid = require('shortid');
 const VacancySchema = new Schema({
     title: {
         type: String,
-        required: true,
+        required: 'Title is required',
         trim: true
     },
     company: {
         type: String,
-        required: true,
+        required: 'Company is required',
         trim: true
     },
     location: {
         type: String,
-        required: true,
+        required: 'Location is required',
         trim: true
     },
     salary: {
         type: String,
         trim: true,
-        default: 'Negotiable'
+        default: 0
     },
     contract: {
         type: String,
