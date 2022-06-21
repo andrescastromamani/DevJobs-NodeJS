@@ -15,7 +15,12 @@ const app = express()
 const hostname = '127.0.0.1';
 const port = process.env.PORT;
 //Enable engine template
-app.engine('handlebars', engine());
+app.engine('handlebars',
+    engine({
+        defaultLayout: 'main',
+        helpers: require('./helpers/handlebars')
+    })
+);
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
