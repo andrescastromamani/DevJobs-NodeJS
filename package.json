@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "start": "concurrently \"npm run dev\" \"npm run watch\"",
+    "watch": "webpack --watch --mode development"
   },
   "author": "Andres Castro Mamani",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.3.0",
     "connect-mongo": "^3.2.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.0",
@@ -20,6 +23,11 @@
     "slug": "^5.2.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   }
 }

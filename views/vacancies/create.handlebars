@@ -25,16 +25,19 @@
         </div>
         <h3>Description</h3>
         <div class="mb-3">
-            <label for="decription" class="form-label">Description</label>
+            <label for="description" class="form-label">Description</label>
             <input type="hidden" name="description" id="x" class="form-control">
             <trix-editor input="x"></trix-editor>
         </div>
         <h3>Knowledges</h3>
-        <div class="w-100">
+        <div class="w-100" id="knowledges">
             <ul class="d-flex flex-wrap justify-content-center align-items-center">
                 {{#selectSkills a}}
                 {{/selectSkills}}
             </ul>
+        </div>
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn-primary" value="Save">
         </div>
     </form>
 </div>
