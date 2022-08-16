@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
 const path = require('path');
+const bodyParser = require('body-parser');
 
 require('dotenv').config();
 
@@ -14,6 +15,9 @@ const db = require('./config/db');
 const app = express()
 const hostname = '127.0.0.1';
 const port = process.env.PORT;
+//enable body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }))
 //Enable engine template
 app.engine('handlebars',
     engine({

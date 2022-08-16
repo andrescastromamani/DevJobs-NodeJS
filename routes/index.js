@@ -8,5 +8,6 @@ module.exports = () => {
     router.get('/', homeController.index);
     //vacancies
     router.get('/vacancies/create', vacancyController.create);
+    router.post('/vacancies/create', vacancyController.store);
     return router;
 }

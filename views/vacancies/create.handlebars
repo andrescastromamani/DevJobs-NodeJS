@@ -1,6 +1,6 @@
 <div class="row shadow p-3 mb-5 bg-body rounded">
     <h2 class="text-center">Create Vacancy</h2>
-    <form action="/vacancy/create" method="post">
+    <form action="/vacancies/create" method="post">
         <h3>Information</h3>
         <div class="mb-3">
             <label for="title" class="form-label">Title Vacancy</label>
@@ -36,6 +36,7 @@
                 {{/selectSkills}}
             </ul>
         </div>
+        <input type="hidden" name="skills" id="skills">
         <div class="d-flex justify-content-center">
             <input type="submit" class="btn btn-primary" value="Save">
         </div>

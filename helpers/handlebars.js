@@ -5,7 +5,7 @@ module.exports = {
         let html = '';
         skills.forEach(skill => {
             html += `
-                <li class="btn btn-outline-secondary m-2">${skill}</li>
+                <li class="btn btn-outline-success m-2">${skill}</li>
             `;
         });
         return options.fn().html = html;

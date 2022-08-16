@@ -15,4 +15,6 @@ const addSkill = (e) => {
             e.target.classList.add('active');
         }
     }
+    const skillsArray = [...skills];
+    document.querySelector('#skills').value = skillsArray;
 }
