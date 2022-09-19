@@ -34,24 +34,21 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row mt-3 shadow p-3 mb-5 bg-body rounded">
-            <div class="col-12 col-md-6">
-                <div class="d-grid d-sm-block">
+        <div class="row mt-5 shadow mb-5 bg-body rounded">
+            <div class="col-12 col-md-6 p-0  d-flex align-items-center justify-content-center">
+                <div class="p-3 text-center text-md-start">
                     <h2>{{title}}</h2>
                     <hr>
                     <p>{{tagline}}</p>
-                    <a href="/vacancies/create" class="btn btn-outline-dark">Create Vacancy</a>
+                    <a href="/vacancies/create" class="btn btn-outline-dark mb-3 d-blocks">Create Vacancy</a>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div>
-                    <img src="/img/dev.jpg" alt="dev image" class="main-image">
-                </div>
+            <div class="col-12 col-md-6 p-0">
+                <img src="/img/dev.jpg" alt="dev image" class="main-image rounded-end">
             </div>
         </div>
         {{{body}}}
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

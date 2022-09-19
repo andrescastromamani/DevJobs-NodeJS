@@ -8,7 +8,7 @@
     "start": "concurrently \"npm run dev\" \"npm run watch\"",
     "watch": "webpack --watch --mode development"
   },
-  "author": "Andres Castro Mamani",
+  "author": "Andrés Castro Mamani",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^7.3.0",
